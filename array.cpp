@@ -16,5 +16,13 @@
     codeArray[6] = "C235";
     codeArray[7] = "B179";
 
+    //printing string elements that have initial letter B using a for loop
+    for (int i = 0; i < arraysize; i++){
+        if (codeArray[i].at(0) == 'B'){
+            cout<<codeArray[i]<<endl;
+        }
+    }
+
+
     return 0;
   }
