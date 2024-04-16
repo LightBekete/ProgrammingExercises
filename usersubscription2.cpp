@@ -21,5 +21,9 @@
         else if (days <= 10){
             cout<<"Your subscription will expire soon. Renew now!"<<endl;
         }
+        
+        else if (days == 11){
+            cout<<"You have an active subscription."<<endl;
+        }
     return 0;
    }
