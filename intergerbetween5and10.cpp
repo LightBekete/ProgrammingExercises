@@ -9,11 +9,16 @@ int main() {
 
     while (loopcondition) {
         cout << "Enter an integer value between 5 and 10: "<<endl;
-        if (!(cin >> value)) { // Check if input is not an integer
+        cin >> value;
+        if (!value) { // Check if input is not an integer
             cout << "Sorry, you entered an invalid input. Please try again." <<endl;
             cin.clear(); // this is used to Clear the error flag
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); //  this ignores invalid input and clears the buffer
-       } else {
+       } 
+         else if (value < 5 || value > 10) { // this Checks if input is outside the range
+            cout << "You entered "<<value<<" .Please enter a number between 5 and 10." <<endl;
+        } 
+       else {
             loopcondition = false; // Exit the loop if input is valid and within the range
         }
     }
