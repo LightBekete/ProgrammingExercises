@@ -6,9 +6,9 @@ using namespace std;
 //function declations
  void EntryWindow();
  void TriangleArea();
- void SquaregleArea();
+ void SquareArea();
  void RectangleArea();
- void QuitProgram();
+ 
  
   
   int main(){
@@ -30,10 +30,12 @@ using namespace std;
           // Check if input is not an integer
             cin.clear(); // this is used to Clear the error flag
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); //  this ignores invalid input and clears the buffer
+            cout<<"Invalid input. Please try again."<<endl;
+            cout<<""<<endl;
             EntryWindow();
             }
             else if (choice == 1){
-              SquaregleArea();
+             SquareArea();
             }
             else if (choice == 2){
               RectangleArea();
@@ -42,9 +44,13 @@ using namespace std;
               TriangleArea();
             }
             else if (choice == 4){
-             cout<<"The program has Quited running"<<endl;
+             cout<<"The program has Quitted running"<<endl;
+             cout<<""<<endl;
+             exit(1);
             }
             else{
+               cout<<"Invalid input. Please try again."<<endl;
+                cout<<""<<endl;
               EntryWindow();
             }
            
@@ -52,6 +58,35 @@ using namespace std;
 
          
   }
+   //function definitions
+   void SquareArea() {
+    cout<<"Enter length and height of the Square"<<endl;
+        double length;
+        cin>>length;
+         double height;
+        cin>>height;
+
+          if (!(length) || !(height)) { 
+          // Check if input is not an integer
+            cin.clear(); // this is used to Clear the error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); //  this ignores invalid input and clears the buffer
+            cout<<" Invalid inputs, Try again."<<endl;
+             cout<<""<<endl;
+            SquareArea();
+           }
+           
+            double area ;
+            area =  length * height;
+           cout<<"The Area of the Square is "<<area<<endl;
+           cout<<""<<endl;
+           EntryWindow();
+   }
+   void RectangleArea(){
+
+   }
+   void TriangleArea(){
+
+   }
         
     
 
