@@ -104,7 +104,27 @@ using namespace std;
            EntryWindow();
    }
    void TriangleArea(){
+     cout<<"Enter base and height of the Triangle"<<endl;
+        double base;
+        cin>>base;
+         double height;
+        cin>>height;
 
+          if (!(base) || !(height)) { 
+          // Check if input is not an integer
+            cin.clear(); // this is used to Clear the error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); //  this ignores invalid input and clears the buffer
+            cout<<" Invalid inputs, Try again."<<endl;
+             cout<<""<<endl;
+            TriangleArea();
+           }
+           const double half =0.5;
+           
+            double area ;
+            area =  half * base * height;
+           cout<<"The Area of the Triangle is "<<area<<endl;
+           cout<<""<<endl;
+           EntryWindow();
    }
         
     
