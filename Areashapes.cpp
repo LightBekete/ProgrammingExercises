@@ -82,7 +82,26 @@ using namespace std;
            EntryWindow();
    }
    void RectangleArea(){
+      cout<<"Enter length and height of the Rectangle"<<endl;
+        double length;
+        cin>>length;
+         double height;
+        cin>>height;
 
+          if (!(length) || !(height)) { 
+          // Check if input is not an integer
+            cin.clear(); // this is used to Clear the error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); //  this ignores invalid input and clears the buffer
+            cout<<" Invalid inputs, Try again."<<endl;
+             cout<<""<<endl;
+            RectangleArea();
+           }
+           
+            double area ;
+            area =  length * height;
+           cout<<"The Area of the Rectangle is "<<area<<endl;
+           cout<<""<<endl;
+           EntryWindow();
    }
    void TriangleArea(){
 
