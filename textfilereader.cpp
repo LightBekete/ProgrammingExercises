@@ -2,6 +2,8 @@
 #include <fstream>
 #include<string>
 using namespace std;
+ //function declaration
+void reverse(string );
 
     int main(){
       int wordscount = 0;
@@ -37,14 +39,27 @@ using namespace std;
            wordscount++;
         }
         cout<<"The number of vowel in the input.txt file is : "<<vowelscount<<endl;
+        cout<<""<<endl;
         cout<<"The number of words in the input.txt file is : "<<wordscount<<endl;
-        
-       
-        
-        
-        
 
-         
+        txtReader.close();//closing the file
+        txtReader.open("input.txt");//opening the file
+
+//getting the data from the file and assigning it to fileData string variable
+        while(!txtReader.eof()){
+          getline(txtReader,fileData,'#');
+        }
+        //the reverse function calling
+          reverse(fileData);
         
         return 0;
+    }
+
+
+    void reverse(string fileDataparameter){
+        int stringlength = fileDataparameter.length(); 
+      for (int i =stringlength-1; i>=0;i--){
+        cout<<fileDataparameter.at(i);
+
+      }
     }
