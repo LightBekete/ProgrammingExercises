@@ -4,6 +4,7 @@
 using namespace std;
  //function declaration
 void reverse(string );
+void capitalisecondcharacter();
 
     int main(){
       int wordscount = 0;
@@ -38,7 +39,7 @@ void reverse(string );
           }
            wordscount++;
         }
-        cout<<"The number of vowel in the input.txt file is : "<<vowelscount<<endl;
+        cout<<"The number of vowels in the input.txt file is : "<<vowelscount<<endl;
         cout<<""<<endl;
         cout<<"The number of words in the input.txt file is : "<<wordscount<<endl;
 
@@ -51,15 +52,43 @@ void reverse(string );
         }
         //the reverse function calling
           reverse(fileData);
+
+          cout<<""<<endl;//printing a blank line
+
+         capitalisecondcharacter();
         
         return 0;
     }
 
-
+    
     void reverse(string fileDataparameter){
+       cout<<"the reverse of the fileData string below: ";
         int stringlength = fileDataparameter.length(); 
       for (int i =stringlength-1; i>=0;i--){
         cout<<fileDataparameter.at(i);
 
       }
+      cout<<""<<endl;
     }
+
+    void capitalisecondcharacter() {
+    string secondcharacter = "";
+    string fileData;
+    ifstream txtReader("input.txt");
+    if (!txtReader.is_open()) {
+        std::cerr << "Error opening file." << std::endl;
+        return;
+    }
+        
+    while (txtReader >> fileData) {
+        for (size_t i = 0; i < fileData.length(); i++) {
+        
+                fileData.at(1) = toupper(fileData.at(1));
+            
+        }
+        secondcharacter += fileData + " ";
+    }
+    cout << "second letter capitalized text:" << endl;
+    cout<<secondcharacter <<endl;
+    txtReader.close();
+}
