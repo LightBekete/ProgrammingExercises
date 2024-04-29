@@ -1,27 +1,39 @@
+
 //class implementation of Rectangle
 #include "Rectangle.h"
-using namespace std;
   
   Rectangle::Rectangle(){
     rectangleLength = 0;
     rectangleWidth  = 0;
   }
-  void Rectangle::setRectangleLength(){
-   
+  //getter and setter functions implementation
+
+  void Rectangle::setRectangleLength( float newLength){
+    rectangleLength = newLength;
   }
  
  float Rectangle::getRectangleLength(){
     return rectangleLength;
  }
 
- void Rectangle::setRectangleWidth(const float newWidth){
+ void Rectangle::setRectangleWidth( float newWidth){
     rectangleWidth = newWidth;
  }
  float Rectangle::getRectangleWidth(){
     return rectangleWidth;
  }
  float Rectangle::areaRectangle(){
-   float (rectangleLength * rectangleWidth);
+   float area =  rectangleLength * rectangleWidth;
+    return area;
  }
+
+//Destructor implemented
+ Rectangle::~Rectangle(){
+
+ }
+ 
+
+
+ 
 
 
