@@ -1,6 +1,9 @@
-#pragma once
+#ifndef Shapes_h
+#define Shapes_h
+
 
 namespace allShapes {
+
     class Circle{
     private:
      double radius;
@@ -9,15 +12,12 @@ namespace allShapes {
     Circle(double newRadius);
     ~Circle();
     //getter and setter functions
-    void setRadius(const double newRadius){
-        radius = newRadius;
-    }
-    double getRadius() const {
-        return radius;
-    }
+    void setRadius(const double newRadius);
+
+    double getRadius();
 };
 
- 
+
    class Triangle{
     private:
      double base;
@@ -27,21 +27,12 @@ namespace allShapes {
     Triangle(double newBase , double newHeight);
     ~Triangle();
     //getter and setter functions
-    void setBase(const double newBase){
-        base = newBase;
-    }
-    void setHeight(const double newHeight){
-        height = newHeight;
-    }
-    double getBase() const {
-        return base;
-    }
-    double getHeight()const {
-        return height;
-    }
+    void setBase( double newBase);
+    void setHeight( double newHeight);
+    double getBase();
+    double getHeight();
 };
-
-   
+  
 class Sqaure{
     private:
      double side;
@@ -50,11 +41,22 @@ class Sqaure{
     Sqaure(double newSide);
     ~Sqaure();
     //getter and setter functions
-    void setSide(const double newSide){
-        side = newSide;
-    }
-    double getSide() const {
-        return side;
-    }
+    void setSide(const double newSide);
+    double getSide();
 };
-}
+
+
+
+
+ class Area{
+   public:
+   ~Area();
+   static double  areaOfSquare( Sqaure& newSquare);
+   static double  areaOfTriangle( Triangle& newTriangle);
+   static double areaOfCircle( Circle& newCircle);
+
+ };
+
+};
+
+#endif

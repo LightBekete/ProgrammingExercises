@@ -11,17 +11,17 @@ allShapes::Triangle::Triangle(double newBase , double newHeight){
 
 //setter and getter function implementation
 
-void allShapes::Triangle::setBase(const double newBase){
+void allShapes::Triangle::setBase( double newBase){
     base = newBase;
 }
-void allShapes::Triangle::setHeight(const double newHeight){
+void allShapes::Triangle::setHeight( double newHeight){
     height = newHeight;
 }
  
-double allShapes::Triangle::getBase() const{
+double allShapes::Triangle::getBase() {
     return base;
 }
-double allShapes::Triangle::getHeight() const{
+double allShapes::Triangle::getHeight() {
     return height;
 }
 

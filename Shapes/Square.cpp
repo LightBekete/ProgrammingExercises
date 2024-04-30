@@ -9,10 +9,10 @@ allShapes::Sqaure::Sqaure(double newSide){
 }
 //setters and getters implementation
 
-void allShapes::Sqaure::setSide(const double newSide){
+void allShapes::Sqaure::setSide( double newSide){
     side = newSide;
 }
-double allShapes::Sqaure::getSide() const{
+double allShapes::Sqaure::getSide() {
     return side;
 }
 

@@ -12,7 +12,7 @@
  void allShapes::Circle::setRadius(double newRadius){
     radius = newRadius;
  }
- double allShapes::Circle::getRadius()const{
+ double allShapes::Circle::getRadius(){
     return radius;
  }
  
