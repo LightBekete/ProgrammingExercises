@@ -18,3 +18,9 @@ Person::~Person() {}
 float Person::operator+(const Person& otherPerson) {
     return mWeight + otherPerson.mWeight;
 }
+bool Person::operator!=(const Person& otherPerson) {
+    return mFirstName != otherPerson.mFirstName;
+}
+bool Person::operator==(const Person& otherPerson) {
+    return mFirstName == otherPerson.mFirstName;
+}

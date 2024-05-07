@@ -11,6 +11,10 @@ public:
 
     // Overload the add operator
     float operator+(const Person& otherPerson);
+      // Overload != operator based on mFirstName
+    bool operator!=(const Person& otherPerson);
+      // Overload == operator based on mFirstName
+    bool operator==(const Person& otherPerson);
 private:
    float mWeight;
     string mFirstName;
