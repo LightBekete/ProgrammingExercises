@@ -2,15 +2,15 @@
 #include <iostream>
 
 Person::Person()  {
-    mWeight = 0;
+   /* mWeight = 0;
     mFirstName = ""; 
     mAge = 0;
+    */
 }
 
 Person::Person(string newName, float newWeight)  {
     mWeight = newWeight;
     mFirstName = newName;
-    mAge = 0;
 }
 
 Person::~Person() {}
@@ -33,4 +33,10 @@ bool Person::operator<(const Person& otherPerson) {
 }
 Person::operator int(){
     return mAge;
+}
+Person::operator string(){
+    return mFirstName;
+}
+Person::operator float(){
+    return mWeight;
 }
