@@ -24,3 +24,10 @@ bool Person::operator!=(const Person& otherPerson) {
 bool Person::operator==(const Person& otherPerson) {
     return mFirstName == otherPerson.mFirstName;
 }
+bool Person::operator>(const Person& otherPerson) {
+    return mAge > otherPerson.mAge;
+}
+
+bool Person::operator<(const Person& otherPerson) {
+    return mAge < otherPerson.mAge;
+}

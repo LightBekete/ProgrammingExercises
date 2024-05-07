@@ -15,6 +15,9 @@ public:
     bool operator!=(const Person& otherPerson);
       // Overload == operator based on mFirstName
     bool operator==(const Person& otherPerson);
+     // Overload > and < operators based on mAge
+    bool operator>(const Person& otherPerson);
+    bool operator<(const Person& otherPerson);
 private:
    float mWeight;
     string mFirstName;
