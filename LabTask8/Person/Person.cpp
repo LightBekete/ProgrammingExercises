@@ -31,3 +31,6 @@ bool Person::operator>(const Person& otherPerson) {
 bool Person::operator<(const Person& otherPerson) {
     return mAge < otherPerson.mAge;
 }
+Person::operator int(){
+    return mAge;
+}

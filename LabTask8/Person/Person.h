@@ -18,6 +18,7 @@ public:
      // Overload > and < operators based on mAge
     bool operator>(const Person& otherPerson);
     bool operator<(const Person& otherPerson);
+    operator int();
 private:
    float mWeight;
     string mFirstName;

@@ -20,5 +20,7 @@ int main() {
     if (John < Jane) {
         cout << "John is older than Jane" << endl;
     }
+    int johnAge = John;
+    cout<<"John`s Age: "<<johnAge<<endl;
     return 0;
 }
