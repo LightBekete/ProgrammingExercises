@@ -2,14 +2,11 @@
 using namespace std;
 
 //Global varibale declaration
-int g;
+int g =20;
 
 int main(){
-    //Local variables declaration
-    int a, b;
-    //actual initialisation
-    a=10;
-    b=20;
-    g=a+b;
+    //Local variables declara
+    g=10;
+    cout<<g;
     return 0;
 }
