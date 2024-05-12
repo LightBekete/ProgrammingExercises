@@ -1,15 +1,20 @@
-#include <fstream> #include <iostream> using namespace std; 
+ #include <iostream>
+#include <fstream>
+  using namespace std; 
 int main () { 
 char data [100]; 
 // open a text file in write mode. 
 ofstream outfile; outfile.open("afile.txt"); 
-cout << "Writing to the file" << endl; cout << "Enter your name: "; 
+cout << "Writing to the file" << endl;
+ cout << "Enter your name: "; 
 cin.getline (data, 100); 
-// write inputted data into the text file. outfile << data << endl; 
+// write inputted data into the text file. 
+outfile << data << endl; 
 cout << "Enter your age: "; 
 cin >> data; 
 cin.ignore (); 
-// again write inputted data into the text file. outfile << data << endl; 
+// again write inputted data into the text file. 
+outfile << data << endl; 
 // close the opened file. 
 outfile.close(); 
 // open a text file in read mode. 
@@ -19,7 +24,10 @@ cout << "Reading from the file" << endl;
 infile >> data; 
 // write the data at the screen. 
 cout << data << endl; 
-// again read the data from the file and display it. infile >> data; 
+// again read the data from the file and display it. 
+infile >> data; 
 cout << data << endl; 
-// close the opened file. infile.close(); 
-return 0; 
+// close the opened file. 
+infile.close(); 
+return 0;
+} 
