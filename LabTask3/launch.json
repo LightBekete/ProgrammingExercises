@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "e:/C++Projects/LabTask3/C++Operators",
-      "program": "e:/C++Projects/LabTask3/C++Operators/build/Debug/outDebug",
+      "cwd": "e:/C++Projects/LabTask3",
+      "program": "e:/C++Projects/LabTask3/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
