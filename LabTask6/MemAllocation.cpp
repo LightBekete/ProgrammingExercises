@@ -1,31 +1,24 @@
 #include <iostream> 
 using namespace std; 
 int main() { 
-int numberOfElements 
-int* dynamicArray 
-= 
-= 
-0; nullptr; 
+int numberOfElements = 0; 
+int* dynamicArray = nullptr; 
 cout << "How many numbers would you like to type? "; 
 cin >> numberOfElements; 
 dynamicArray = new int[numberOfElements]; 
-if (dynamicArray 
-} 
+if (dynamicArray == nullptr)
+{
+    cout << "Error: memory could not be allocated";
+}
 else { 
-== 
-nullptr) { 
-cout << "Error: memory could not be allocated"; 
+ 
 for (int i = 0; i < numberOfElements; i++) { 
-cout << "Enter number: "; cin >> dynamicArray[i]; 
+cout << "Enter number: "; 
+cin >> dynamicArray[i]; 
 } 
-cout << "You have entered: 
-19 
-for (int j 
-= 
-0; j < numberOfElements; j++) { 
-cout << dynamicArray[j] << "; 
-11 
-> 
+cout << "You have entered:"; 
+for (int j = 0; j < numberOfElements; j++) { 
+cout << dynamicArray[j] << ", "; 
 } 
 delete[] dynamicArray; 
 } 

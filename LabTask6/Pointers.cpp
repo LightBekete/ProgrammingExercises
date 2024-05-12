@@ -14,7 +14,7 @@ pPointer =  &secondValue;
 
 *pPointer = 20; //Indirection 
 cout << "firstValue is " << firstValue << '\n';
- cout << "secondValue is" << secondValue << '\n'; 
+ cout << "secondValue is " << secondValue << '\n'; 
 return 0; 
 
 } 
